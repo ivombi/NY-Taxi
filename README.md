@@ -5,4 +5,5 @@ The New York City Taxi and Limousine Commission (TLC) was created in 1971. This 
 This project was aimed at using the output datasets from the [NY Big Data Analytic Project](https://github.com/MSBGDA/INFO-H-600-Project-Group-AH.git) to developed a visualisation dashboard to help inform tourists to New York on how to maximised the used of the Yellow and Green taxi as their main source of mobility in the city. 
 ## Repository Content
 This repository contains the following :
-> - 
+> - #### [Data Folder](https://github.com/ivombi/NY-Taxi/tree/main/data):#### Contains three files, location file (df_loc.csv), yellow(df_y.csv) and green (df_g.csv) sample dataset respectively. They are all embedded in the notebooks.
+> - ####  
