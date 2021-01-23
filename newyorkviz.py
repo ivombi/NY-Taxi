@@ -1,4 +1,4 @@
-# nytaxiviz.py
+# newyorkviz.py
 
 """ New york taxi vizualisation class"""
 
@@ -25,7 +25,7 @@ class NYTaxiViz():
     field_list = [('Trip duration','trip_duration'),('Trip Amount','total_amount'),('Tips Amount','tip_amount'),\
                   ('Trip distance','trip_distance')] 
     
-    def __init__(self,df_yellow=0,df_green=0, df_loc=0):
+    def __init__(self,df_yellow='df_y.csv',df_green='df_g.csv', df_loc='df_loc.csv'):
         
         """Initialize NYTaxiViz attributes"""
         
@@ -66,15 +66,17 @@ class NYTaxiViz():
     def df_loc(self,directory):
         self._df_loc = directory
     
-    
-    def set_directory(self,df_y,df_g, df_loc):
+    @classmethod
+    def set_directory(self, df_y='df_y.csv', df_g='df_g.csv'):
         """Set all directories at once"""
         self.df_yellow = df_y
         self.df_green = df_g
-        self.df_loc = pd.read_csv(df_loc)
+        self.df_loc = pd.read_csv('df_loc.csv')
         
+    @classmethod    
     def process(self):
         """Importing the needed dataframes and process them to output a single dataframe"""
+        
         
         df_y = pd.read_csv(self.df_yellow)
         df_g = pd.read_csv(self.df_green)
@@ -125,9 +127,9 @@ class NYTaxiViz():
         index_name = df_concat[df_concat['trip_duration']<0].index
         df_concat.drop(index_name,inplace=True)
         
-        return df_concat
+        return df_concat, df_loc
     
-    
+    @classmethod
     def loc_list(self):
         
         dict = {}
@@ -137,6 +139,7 @@ class NYTaxiViz():
         loc_list = [(k, v) for k, v in dict.items()] 
         return loc_list
     
+    @classmethod
     def taxi_plot(self, df,stat,taxi,field,start,end,date,size):
         """Method to generate the plots. It is called from the taxi_viz method"""
         
@@ -201,7 +204,7 @@ class NYTaxiViz():
 
         plt.show()
         
-        
+    @classmethod    
     def taxi_viz(self,start, end,stat,field,taxi,borough,month,size,date,df,df_zone):
     
         '''Function to create plot base on selected criteria'''
@@ -220,10 +223,9 @@ class NYTaxiViz():
                                 & (df['month_name'].isin(month)) & (df['tpep_pickup_datetime'] >= pd.to_datetime(date))])
 
         df = df.sample(frac=size)
-        print(size)
         if (start ==265  and end == 265 ) and taxi=='All':
 
-            NYTaxiViz.taxi_plot(self,df,stat,taxi,field,start,end,date,size)
+            NYTaxiViz.taxi_plot(df,stat,taxi,field,start,end,date,size)
 
         elif (start==265  and end ==265) and taxi=='green':
             df_g = pd.DataFrame(df.loc[(df.taxi_type=='green')])
