@@ -67,11 +67,11 @@ class NYTaxiViz():
         self._df_loc = directory
     
     @classmethod
-    def set_directory(self, df_y='df_y.csv', df_g='df_g.csv'):
+    def set_directory(self, df_y='./data/df_y.csv', df_g='./data/df_g.csv'):
         """Set all directories at once"""
         self.df_yellow = df_y
         self.df_green = df_g
-        self.df_loc = pd.read_csv('df_loc.csv')
+        self.df_loc = pd.read_csv('./data/df_loc.csv')
         
     @classmethod    
     def process(self):
