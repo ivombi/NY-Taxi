@@ -9,3 +9,5 @@ This repository contains the following :
 > - [Dashboard](https://github.com/ivombi/NY-Taxi/blob/main/implementation.ipynb): This notebook implements the NYTaxiViz class and produces the necessary visuals for analysis. 
 > - [class](https://github.com/ivombi/NY-Taxi/blob/main/newyorkviz.py):This python file shows the codes used to implement the NYTaxiViz class use in the [Dashboard](https://github.com/ivombi/NY-Taxi/blob/main/implementation.ipynb) notebook
 > - [Raw File](https://github.com/ivombi/NY-Taxi/blob/main/visuals.ipynb): This notebook illustrate the complete implementation which was then used to create the [class](https://github.com/ivombi/NY-Taxi/blob/main/newyorkviz.py) file. 
+## Implement Locally
+To implement this project locally on your personal laptop, you need to clone this repository and run the Dashboard notebook. 
