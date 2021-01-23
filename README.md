@@ -16,3 +16,6 @@ This repository contains the following :
 To implement this project locally on your personal laptop, you need to [clone ](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) this repository and run the [Dashboard](https://github.com/ivombi/NY-Taxi/blob/main/implementation.ipynb) notebook. Sample Dashboard Below
 <br>
 ![taxi](./Pics/viz.PNG)
+
+## Related Project
+> - [New York Big Data Analytic Project](https://github.com/MSBGDA/INFO-H-600-Project-Group-AH.git)
