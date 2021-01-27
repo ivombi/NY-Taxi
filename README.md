@@ -19,3 +19,4 @@ To implement this project locally on your personal laptop, you need to [clone ](
 
 ## Related Project
 > - [New York Big Data Analytic Project](https://github.com/MSBGDA/INFO-H-600-Project-Group-AH.git)
+> - [New York Taxis Time Series Forecast Project](https://github.com/ivombi/NY-Taxi-Forecast.git)
