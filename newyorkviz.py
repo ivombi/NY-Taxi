@@ -1,5 +1,5 @@
 # newyorkviz.py
-
+Done by: Ivo
 """ New york taxi vizualisation class"""
 
 #importing necessary libraries
